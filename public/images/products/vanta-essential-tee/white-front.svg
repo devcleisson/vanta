@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250">
+<defs>
+<linearGradient id="v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.07"/><stop offset="0.55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.12"/></linearGradient>
+<radialGradient id="r" cx="0.42" cy="0.32" r="0.75"><stop offset="0" stop-color="#fff" stop-opacity="0.08"/><stop offset="1" stop-color="#000" stop-opacity="0.10"/></radialGradient>
+<radialGradient id="bg" cx="0.5" cy="0.42" r="0.8"><stop offset="0" stop-color="#EFEFED"/><stop offset="1" stop-color="#E8E8E6"/></radialGradient>
+<filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.16"/></filter>
+<clipPath id="c"><path d="M 400 190 C 430 242, 570 242, 600 190 L 705 222 L 868 352 L 792 470 L 714 420 L 718 1060 C 598 1072, 402 1072, 282 1060 L 286 420 L 208 470 L 132 352 L 295 222 Z"/></clipPath>
+</defs>
+<rect width="1000" height="1250" fill="url(#bg)"/>
+<g filter="url(#s)"><path d="M 400 190 C 430 242, 570 242, 600 190 L 705 222 L 868 352 L 792 470 L 714 420 L 718 1060 C 598 1072, 402 1072, 282 1060 L 286 420 L 208 470 L 132 352 L 295 222 Z" fill="#F3F3F1"/></g>
+<g clip-path="url(#c)"><path d="M 400 190 C 430 242, 570 242, 600 190 C 560 176, 440 176, 400 190 Z" fill="#c5c5c3"/><path d="M 400 192 C 430 258, 570 258, 600 192" stroke="#dadad8" stroke-width="16" fill="none"/><path d="M 394 200 C 430 270, 570 270, 606 200" stroke="rgba(0,0,0,0.22)" stroke-width="2.5" stroke-dasharray="7 6" fill="none"/><path d="M 699 226 Q 717 321 714 420 M 301 226 Q 283 321 286 420" stroke="rgba(0,0,0,0.12)" stroke-width="3" fill="none"/><path d="M 846.1111423869393 337.96868101726875 L 770.1111423869393 455.96868101726875 M 153.88885761306074 337.96868101726875 L 229.88885761306074 455.96868101726875" stroke="rgba(0,0,0,0.22)" stroke-width="2.5" stroke-dasharray="7 6" fill="none"/><path d="M 286 1038 C 400 1050, 600 1050, 714 1038" stroke="rgba(0,0,0,0.22)" stroke-width="2.5" stroke-dasharray="7 6" fill="none"/><path d="M 380 800 C 420 860, 430 940, 420 1000" stroke="rgba(0,0,0,0.12)" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M 640 640 C 610 720, 600 800, 615 890" stroke="rgba(0,0,0,0.12)" stroke-width="3" fill="none" stroke-linecap="round"/><text x="500" y="380" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="22" letter-spacing="7.04" fill="#141414" opacity="0.8">VANTA</text><rect width="1000" height="1250" fill="url(#v)"/><rect width="1000" height="1250" fill="url(#r)"/></g>
+<path d="M 400 190 C 430 242, 570 242, 600 190 L 705 222 L 868 352 L 792 470 L 714 420 L 718 1060 C 598 1072, 402 1072, 282 1060 L 286 420 L 208 470 L 132 352 L 295 222 Z" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="2"/>
+
+</svg>

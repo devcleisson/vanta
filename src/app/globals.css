@@ -1,0 +1,151 @@
+@import "tailwindcss";
+@import "@fontsource-variable/archivo/wdth.css";
+
+/*
+  VANTA design tokens
+  ───────────────────
+  paper     #FFFFFF  page background
+  concrete  #EDEDEB  image wells, quiet sections
+  stone     #D7D6D3  hairlines, borders
+  smoke     #807F7C  secondary text
+  graphite  #2B2B2B  secondary surfaces on dark
+  ink       #000000  type, primary actions, hero
+*/
+
+@theme {
+  --color-paper: #ffffff;
+  --color-concrete: #ededeb;
+  --color-stone: #d7d6d3;
+  --color-smoke: #807f7c;
+  --color-graphite: #2b2b2b;
+  --color-ink: #000000;
+  --color-danger: #b42318;
+  --color-success: #1d6b45;
+  --color-warning: #8a5a00;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo Variable", var(--font-geist-sans), ui-sans-serif, sans-serif;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+
+  --animate-rise: rise 0.9s var(--ease-out-quart) both;
+  --animate-fade: fade 0.5s var(--ease-out-quart) both;
+  --animate-slide-in-right: slide-in-right 0.45s var(--ease-out-quart) both;
+  --animate-slide-out-right: slide-out-right 0.3s var(--ease-in-out-quint) both;
+  --animate-slide-in-left: slide-in-left 0.45s var(--ease-out-quart) both;
+  --animate-slide-out-left: slide-out-left 0.3s var(--ease-in-out-quint) both;
+  --animate-pop: pop 0.45s var(--ease-out-quart);
+
+  @keyframes rise {
+    from { transform: translateY(105%); }
+    to { transform: translateY(0); }
+  }
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-in-right {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes slide-out-right {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+  }
+  @keyframes slide-in-left {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes slide-out-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+  @keyframes pop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-paper text-ink font-sans;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    @apply bg-ink text-paper;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+  .dark-surface :focus-visible {
+    outline-color: var(--color-paper);
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  /* Expanded, heavy display face — the brand's voice. */
+  .display {
+    font-family: var(--font-display);
+    font-variation-settings: "wdth" 125;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 0.88;
+    text-transform: uppercase;
+  }
+  .display-tight {
+    font-family: var(--font-display);
+    font-variation-settings: "wdth" 112;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .container-x {
+    @apply mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-10;
+  }
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.35s var(--ease-out-quart);
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Page enter transition (template.tsx re-mounts on every navigation). */
+.page-enter {
+  animation: fade 0.4s var(--ease-out-quart) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

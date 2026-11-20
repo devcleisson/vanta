@@ -1,0 +1,61 @@
+{
+  "name": "vanta-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VANTA — premium streetwear e-commerce (Next.js, Supabase, Drizzle, Stripe)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:reset": "tsx scripts/reset-demo.ts",
+    "admin:promote": "tsx scripts/promote-admin.ts",
+    "art:generate": "tsx scripts/generate-product-art.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.17",
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@hookform/resolvers": "^5.2.2",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.2",
+    "bcryptjs": "^3.0.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.45.4",
+    "geist": "^1.9.2",
+    "jose": "^6.2.18",
+    "lucide-react": "^1.76.0",
+    "next": "16.4.6",
+    "postgres": "^3.4.7",
+    "radix-ui": "^1.8.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-hook-form": "^7.92.0",
+    "recharts": "^3.11.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.34.5",
+    "sonner": "^2.0.8",
+    "stripe": "^23.2.0",
+    "tailwind-merge": "^3.7.1",
+    "zod": "^4.6.7",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.31.11",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}
